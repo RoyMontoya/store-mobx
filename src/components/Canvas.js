@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Dishes from './Dishes';
-import UserOrders from './UserOrders'; 
+import Drinks from './Drinks'
+import UserOrders from './UserOrders';
 
 class Canvas extends Component {
   render() {
@@ -8,7 +9,7 @@ class Canvas extends Component {
       <div className="jumbotron">
         <h2>Nombre de Tienda</h2>
       </div>
-      <Dishes/>
+      <Drinks/>
       <UserOrders/>
     </div>);
   }
