@@ -7,15 +7,17 @@ class UserOrders extends Component {
     let orderDishes = [];
 
     const fill_order_dishes = VarShopController.dishes.forEach((value, index) => {
-      orderDishes.push(<div className="list-group-item" key={index}>
-        <div className="panel-body">
-          <h4>{value.nombre}</h4><br/>
-          <div className="APrecioCantidad">
-            <span>Cantidad: {value.cantidad}</span>
-            <span className="PrecioPlatillo">Precio: {value.cantidad * value.precio}</span>
+      if (value.cantidad != 0) {
+        orderDishes.push(<div className="list-group-item" key={index}>
+          <div className="panel-body">
+            <h4>{value.nombre}</h4><br/>
+            <div className="APrecioCantidad">
+              <span>Cantidad: {value.cantidad}</span>
+              <span className="PrecioPlatillo">Precio: {value.cantidad * value.precio}</span>
+            </div>
           </div>
-        </div>
-      </div>)
+        </div>)
+      }
     })
 
     return (<div className="container col-md-6">
