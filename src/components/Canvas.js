@@ -9,7 +9,7 @@ class Canvas extends Component {
       <div className="jumbotron">
         <h2>Nombre de Tienda</h2>
       </div>
-      <Drinks/>
+      {this.props.children}
       <UserOrders/>
     </div>);
   }
