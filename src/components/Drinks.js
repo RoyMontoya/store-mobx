@@ -12,9 +12,9 @@ class Drinks extends Component {
     const fill_drinks_array = VarShopController.drinks.forEach((value, index) =>
      (drinks_div.push(<div className="list-group-item" key={index}>
       <div className="panel-body">
-        <img role="presentation" src={logo} className="ImagenPlatillo"/>
-        <h2 className="TitlePlatillo">{value.nombre}</h2>
-        <div className="DescripcionPlatillo">{value.descripcion}</div>
+        <img role="presentation" src={value.path} className="ImagenPlatillo"/>
+        <h2 className="TitlePlatillo">{value.name}</h2>
+        <div className="DescripcionPlatillo">{value.description}</div>
         <Order index={index} precio={value.precio} placeOrder={(drinkI, event) => {
           VarShopController.placeDrinkOrder(drinkI, event)}}/>
       </div>
